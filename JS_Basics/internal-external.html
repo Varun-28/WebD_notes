@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Internal &amp; External JavaScript</title>
+        
+        <!--Normalize.css-->
+        <link rel="stylesheet" type="text/css" herf="normalize.css">
+        
+    </head>
+    
+    <body>
+        
+        <div id="container">
+        
+            <h1>Internal &amp; External JavaScript</h1>
+            <p id="output"></p>
+        
+        </div><!--#container-->
+        
+        <!--internal JS must be at the  bottom of the page for smooth loading of pages-->
+        
+        <script type="text/javascript">
+            document.getElementById("output").innerHTML = "This text is created with internal JS";
+        </script>
+        
+        <!-- external JS -->
+        
+        <script type="text/javascript" src="script.js"> 
+        </script>
+        
+    </body>
+</html>

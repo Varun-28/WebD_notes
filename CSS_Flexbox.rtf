@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green255\blue0;\red0\green255\blue255;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Content\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 display: flex\par
+{\pntext\f1\'B7\tab}flex-direction\par
+{\pntext\f1\'B7\tab}justify-content\par
+{\pntext\f1\'B7\tab}align-items\par
+{\pntext\f1\'B7\tab}wrap\par
+{\pntext\f1\'B7\tab}shrink\par
+{\pntext\f1\'B7\tab}expand\par
+{\pntext\f1\'B7\tab}flex-basis\par
+{\pntext\f1\'B7\tab}align-self\par
+
+\pard\sa200\sl276\slmult1\b\par
+CSS Flexbox: Use display: flex to Position Two BoxesPassed\b0\par
+This section uses alternating challenge styles to show how to use CSS to position elements in a flexible way. First, a challenge will explain theory, then a practical challenge using a simple tweet component will apply the flexbox concept.\par
+Placing the CSS property \highlight1\b\i display: flex; \highlight0\b0\i0 on an element allows you to use other flex properties to build a responsive page.\par
+===========================================================================\par
+\b CSS Flexbox: Use the flex-direction Property to Make a Row\b0\par
+Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the flex-direction property to the parent item and setting it to \highlight1\b\i row\b0  \highlight0\i0 or \highlight1\b\i column\highlight0\b0\i0 . Creating a row will align the children horizontally, and creating a column will align the children vertically.\par
+Other options for \ul flex-direction \ulnone are \highlight1\b\i row-reverse \highlight0\b0\i0 and \highlight1\b\i column-reverse\highlight0\b0\i0 .\par
+\ul\i Note\ulnone : The default value for the flex-direction property is row.\par
+\i0 ===========================================================================\par
+\b CSS Flexbox: Align Elements Using the justify-content Property\par
+\b0\par
+Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. Fortunately, the \highlight1\b\i justify-content \highlight0\b0\i0 property has several options to do this. But first, there is some important terminology to understand before reviewing those options.\par
+Here is a useful image showing a row to illustrate the concepts below.\par
+Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the main axis. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.\par
+There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is justify-content: center;, which aligns all the flex items to the center inside the flex container. Others options include:\par
+    \highlight1 flex-start\highlight0 : aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container. This is the default alignment if no justify-content is specified.\par
+    \highlight1 flex-end\highlight0 : aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.\par
+    \highlight1 space-between\highlight0 : aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the remaining space is distributed evenly among the other items.\par
+    \highlight1 space-around\highlight0 : similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items with a half space on either end of the flex container.\par
+    \highlight1 space-evenly\highlight0 : Distributes space evenly between the flex items with a full space at either end of the flex container\par
+\par
+An example helps show this property in action. Add the CSS property justify-content to the #box-container element, and give it a value of \highlight1 center\highlight0 .\par
+===========================================================================\par
+\b CSS Flexbox: Align Elements Using the align-items Property\b0\par
+The align-items property is similar to justify-content. Recall that the justify-content property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.\par
+Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.\par
+CSS offers the align-items property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.\par
+The different values available for \highlight1\b\i align-items \highlight0\b0\i0 include:\par
+    \highlight1 flex-start\highlight0 : aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.\par
+    \highlight1 flex-end\highlight0 : aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.\par
+    \highlight1 center\highlight0 : align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).\par
+    \highlight1 stretch\highlight0 : stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom. This is the default value if no align-items value is specified.\par
+    \highlight1 baseline\highlight0 : align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.\par
+===========================================================================\par
+\b CSS Flexbox: Use the flex-wrap Property to Wrap a Row or Column\b0\par
+CSS flexbox has a feature to split a flex item into multiple rows (or columns). By default, a flex container will fit all flex items together. For example, a row will all be on one line.\par
+However, using the \highlight1\b\i flex-wrap \highlight0\b0\i0 property tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.\par
+CSS also has options for the direction of the wrap:\par
+    \highlight1 nowrap\highlight0 : this is the default setting, and does not wrap items.\par
+    \highlight1 wrap\highlight0 : wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.\par
+    \highlight1 wrap-reverse\highlight0 : wraps items from right-to-left if they are in a row, or bottom-to-top if they are in a column.\par
+===========================================================================\par
+\highlight2\i Above Flex properties belongs to CONTAINER and below properties belongs to ITEMS of Flex CONTAINER.\par
+\highlight0\i0 ===========================================================================\par
+\b CSS Flexbox: Use the flex-shrink Property to Shrink ItemsPassed\b0\par
+So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.\par
+The first is the flex-shrink property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.\par
+The flex-shrink property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a flex-shrink value of 1 and the other has a flex-shrink value of 3, the one with the value of 3 will shrink three times as much as the other.\par
+===========================================================================\par
+\b CSS Flexbox: Use the flex-grow Property to Expand Items\b0\par
+The opposite of flex-shrink is the flex-grow property. Recall that flex-shrink controls the size of the items when the container shrinks. The flex-grow property controls the size of items when the parent container expands.\par
+Using a similar example from the last challenge, if one item has a flex-grow value of 1 and the other has a flex-grow value of 3, the one with the value of 3 will grow three times as much as the other.\par
+===========================================================================\par
+\b CSS Flexbox: Use the flex-basis Property to Set the Initial Size of an Item\par
+\b0 The flex-basis property specifies the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow.\par
+The units used by the flex-basis property are the same as other size properties (px, em, %, etc.). The value auto sizes items based on the content.\par
+===========================================================================\par
+\b CSS Flexbox: Use the order Property to Rearrange Items\par
+\b0 The order property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used.\par
+===========================================================================\par
+\b CSS Flexbox: Use the align-self Property\b0\par
+The final property for flex items is align-self. This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful since other common adjustment techniques using the CSS properties float, clear, and vertical-align do not work on flex items.\par
+align-self accepts the same values as align-items and will override any value set by the align-items property.\i\par
+\highlight2\par
+\par
+}
+ 

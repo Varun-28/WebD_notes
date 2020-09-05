@@ -1,0 +1,91 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green77\blue187;\red0\green0\blue255;\red255\green255\blue0;\red155\green0\blue211;\red255\green255\blue255;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 Content\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 container-fluid\par
+{\pntext\f1\'B7\tab}img-responsive\par
+{\pntext\f1\'B7\tab}text responsive \par
+{\pntext\f1\'B7\tab}button responsive\par
+{\pntext\f1\'B7\tab}col-md-*\par
+{\pntext\f1\'B7\tab}Font Awesome Icon (FAI) with link\par
+{\pntext\f1\'B7\tab}form-control\par
+
+\pard\sa200\sl276\slmult1 Bootstrap: Use Responsive Design with Bootstrap Fluid Containers\b0\par
+Bootstrap will figure out how wide your screen is and respond by resizing your HTML elements - hence the name responsive design.\par
+With responsive design, there is no need to design a mobile version of your website. It will look good on devices with screens of any width.\par
+You can add Bootstrap to any app by adding the following code to the top of your HTML:\par
+\cf1 <link rel="stylesheet" href="{\cf0{\field{\*\fldinst{HYPERLINK https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css }}{\fldrslt{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\ul0\cf0}}}}\f0\fs22 " integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>\par
+\cf0 In this case, we've already added it for you to this page behind the scenes. Note that using either > or /> to close the link tag is acceptable.\par
+To get started, we should nest all of our HTML (except the link tag and the style element) in a div element with the class \highlight3\b container-fluid\highlight0\b0 .\par
+===========================================================================\par
+\b Bootstrap: Make Images Mobile Responsive\par
+\b0 First, add a new image below the existing one. Set its src attribute to {{\field{\*\fldinst{HYPERLINK https://bit.ly/fcc-running-cats }}{\fldrslt{https://bit.ly/fcc-running-cats\ul0\cf0}}}}\f0\fs22 .\par
+It would be great if this image could be exactly the width of our phone's screen.\par
+Fortunately, with Bootstrap, all we need to do is add the \highlight3\b img-responsive \highlight0\b0 class to your image. Do this, and the image should perfectly fit the width of your page.\par
+===========================================================================\par
+\b Bootstrap: Center Text with Bootstrap\par
+\b0 Now that we're using Bootstrap, we can center our heading element to make it look better. All we need to do is add the class \highlight3\b text-center \highlight0\b0 to our h2 element.\par
+\highlight3\b text-primary, text-danger \highlight0\b0 are also classes that can be used.\par
+===========================================================================\par
+\b Bootstrap: Create a Bootstrap Button\par
+\b0 Bootstrap has its own styles for button elements, which look much better than the plain HTML ones.\par
+Create a new button element below your large kitten photo. Give it the btn and btn-default classes, as well as the text of "Like".\par
+\par
+\b Bootstrap: Create a Block Element Bootstrap Button\par
+\b0 Normally, your button elements with the \highlight3\b btn\highlight0\b0  and \highlight3\b btn-default \highlight0\b0 classes are only as wide as the text that they contain. For example:\par
+\cf4 <button class="btn btn-default">Submit</button>\par
+\cf0 This button would only be as wide as the word "Submit".\par
+By making them block elements with the additional class of \highlight3\b btn-block\highlight0\b0 , your button will stretch to fill your page's entire horizontal space and any elements following it will flow onto a "new line" below the block.\par
+\cf4 <button class="btn btn-default btn-block">Submit</button>\cf0\par
+This button would take up 100% of the available width.\par
+Note that these buttons still need the btn class.\par
+\par
+\b Bootstrap: Taste the Bootstrap Button Color Rainbow\par
+\b0 The btn-primary class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.\par
+Replace Bootstrap's btn-default class with \highlight3\b btn-primary \highlight0\b0 in your button.\par
+Note that this button will still need the btn and btn-block classes.\par
+\par
+\b Bootstrap: Call out Optional Actions with btn-infoPassed\par
+\b0 Bootstrap comes with several pre-defined colors for buttons. The btn-info class is used to call attention to optional actions that the user can take.\par
+Create a new block-level Bootstrap button below your "Like" button with the text "Info", and add Bootstrap's \highlight3\b btn-info \highlight0\b0 and btn-block classes to it.\par
+Note that these buttons still need the btn and btn-block classes.\par
+\par
+\b Bootstrap: Warn Your Users of a Dangerous Action with btn-danger\par
+\b0 Bootstrap comes with several pre-defined colors for buttons. The \highlight3\b btn-danger \highlight0\b0 class is the button color you'll use to notify users that the button performs a destructive action, such as deleting a cat photo.\par
+Create a button with the text "Delete" and give it the class btn-danger.\par
+Note that these buttons still need the btn and btn-block classes.\par
+===========================================================================\par
+\b Bootstrap: Use the Bootstrap Grid to Put Elements Side By Side\par
+\b0 Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a div element.\par
+Bootstrap has different column width attributes that it uses depending on how wide the user's screen is. For example, phones have narrow screens, and laptops have wider screens.\par
+Take for example Bootstrap's \highlight3\b col-md-* \highlight0\b0 class. Here, md means medium, and * is a number specifying how many columns wide the element should be. In this case, the column width of an element on a medium-sized screen, such as a laptop, is being specified.\par
+In the Cat Photo App that we're building, we'll use \highlight3\b col-xs-*, \highlight0\b0 where xs means extra small (like an extra-small mobile phone screen), and * is the number of columns specifying how many columns wide the element should be.\par
+Put the Like, Info and Delete buttons side-by-side by nesting all three of them within one \highlight3\b <div class="row"> \highlight0\b0 element, then each of them within a \highlight3\b <div class="col-xs-4"> \highlight0\b0 element.\par
+The row class is applied to a div, and the buttons themselves can be nested within it.\par
+\b Bootstrap: Create a Custom Heading\par
+\b0 We will make a simple heading for our Cat Photo App by putting the title and relaxing cat image in the same row.\par
+Remember, Bootstrap uses a responsive grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a div element.\par
+Nest your first image and your h2 element within a single \highlight3\b <div class="row"> \highlight0\b0 element. Nest your h2 element within a \highlight3\b <div class="col-xs-8">\b0  \highlight0 and your image in a \highlight3\b <div class="col-xs-4">\highlight0\b0  so that they are on the same line.\par
+===========================================================================\par
+\b Bootstrap: Add Font Awesome Icons to our ButtonsPassed\par
+\b0 Font Awesome is a convenient library of icons. These icons can be webfonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.\par
+You can include Font Awesome in any app by adding the following code to the top of your HTML:\par
+\cf1 <link rel="stylesheet" href="{{\field{\*\fldinst{HYPERLINK https://use.fontawesome.com/releases/v5.8.1/css/all.css }}{\fldrslt{https://use.fontawesome.com/releases/v5.8.1/css/all.css\ul0\cf0}}}}\f0\fs22 " integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">\cf0\par
+In this case, we've already added it for you to this page behind the scenes.\par
+The i element was originally used to make other elements italic, but is now commonly used for icons. You can add the Font Awesome classes to the i element to turn it into an icon, for example:\par
+\par
+\cf4 <i class="fas fa-info-circle"></i>\par
+\cf0\par
+Note that the span element is also acceptable for use with icons.\par
+===========================================================================\par
+\b Bootstrap: Responsively Style Radio Buttons\par
+\b0 You can use Bootstrap's col-xs-* classes on form elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.\par
+Nest both your radio buttons within a <div class="row"> element. Then nest each of them within a <div class="col-xs-6"> element.\par
+Note: As a reminder, radio buttons are input elements of type radio.\par
+\b Bootstrap: Style Text Inputs as Form Controls\b0\par
+You can add the fa-paper-plane Font Awesome icon by adding \highlight3\b <i class="fa fa-paper-plane">\highlight0\b0 </i> within your submit button element.\par
+Give your form's text input field a class of form-control. Give your form's submit button the classes btn btn-primary. Also give this button the Font Awesome icon of fa-paper-plane.\par
+\highlight3 All textual <input>, <textarea>, and <select> elements with the class .\cf5\highlight6 form-control \cf0\highlight3 have a width of 100%.\par
+}
+ 

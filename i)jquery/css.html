@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>jQuery CSS</title>
+        
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <h1>jQuery CSS</h1>
+        
+        <div id="circle1" class="circleShape">Styled with CSS</div>
+        <div id="circle2">Styled with jQuery</div>
+        
+        <!-- Load the CDN first -->
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+        <!-- If CDN fails to load, serve up the local version -->
+        <script>window.jQuery || document.write('<script src="js/jquery-2.1.4.js"><\/script>');</script>
+        
+        <script src="js/scripts_med.js"></script>
+    </body>
+    
+</html>
+

@@ -157,6 +157,7 @@ input#reset {
     color: white;
     border: solid 4px #333;
     margin: 0 auto;
+    line-height: 100px;
 }
 
 /* -------------------------------
